@@ -64,13 +64,17 @@ Support AI follows a Retrieval-Augmented Generation workflow.
 
 <div align="center">
 
-| Chat Interface | AI Response |
+| User Dashboard | Chat Interface |
 |:---:|:---:|
-| <img src="screenshots/chat-interface.png" width="400" alt="Chat Interface" /> | <img src="screenshots/ai-response.png" width="400" alt="AI Response" /> |
+| <img src="dashboard.png" width="400" alt="Chat Interface" /> | <img src="chat.png" width="400" alt="AI Response" /> |
 
-| Knowledge Base | Authentication |
+| Support Tickets | Authentication |
 |:---:|:---:|
-| <img src="screenshots/knowledge-base.png" width="400" alt="Knowledge Base" /> | <img src="screenshots/login.png" width="400" alt="Login Interface" /> |
+| <img src="support.png" width="400" alt="Knowledge Base" /> | <img src="login.png" width="400" alt="Login Interface" /> |
+
+| Knowledge Base | Admin Dashboard |
+|:---:|:---:|
+| <img src="documents.png" width="400" alt="Knowledge Base" /> | <img src="admin dash.png" width="400" alt="Login Interface" /> |
 
 </div>
 
