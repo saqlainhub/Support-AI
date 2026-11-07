@@ -70,7 +70,7 @@ Support AI follows a Retrieval-Augmented Generation workflow.
 
 | Support Tickets | Authentication |
 |:---:|:---:|
-| <img src="support.png" width="400" alt="Knowledge Base" /> | <img src="login.png" width="400" alt="Login Interface" /> |
+| <img src="tickets.png" width="400" alt="Knowledge Base" /> | <img src="login.png" width="400" alt="Login Interface" /> |
 
 | Knowledge Base | Admin Dashboard |
 |:---:|:---:|
