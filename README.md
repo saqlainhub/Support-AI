@@ -17,7 +17,7 @@ An AI-powered customer support application that uses Retrieval-Augmented Generat
 
 <br/>
 
-**[🌍 View Live Demo](https://ssupport.vercel.app)**
+**[🌍 View Live Demo](https://ssupport-ai.vercel.app)**
 
 </div>
 
@@ -104,7 +104,7 @@ The project was deployed using Vercel.
 
 <text></text>
 
-**Live Website:** https://ssupport.vercel.app
+**Live Website:** https://ssupport-ai.vercel.app
 
 ## 🎯 Project Objectives
 
