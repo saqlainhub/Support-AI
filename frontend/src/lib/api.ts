@@ -1,30 +1,47 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL?.replace(/\/+$/, "");
 
 export async function apiRequest<T>(
-endpoint: string,
-options: RequestInit = {}
+  endpoint: string,
+  options: RequestInit = {}
 ): Promise<T> {
-if (!API_URL) {
-throw new Error("NEXT_PUBLIC_API_URL is not configured.");
-}
+  if (!API_URL) {
+    throw new Error("NEXT_PUBLIC_API_URL is not configured.");
+  }
 
+  const normalizedEndpoint = endpoint.startsWith("/")
+    ? endpoint
+    : `/${endpoint}`;
 
-const response = await fetch(`${API_URL}${endpoint}`, {
-  ...options,
-  credentials: "include",
-  headers: {
-    ...(options.body instanceof FormData
-      ? {}
-      : { "Content-Type": "application/json" }),
-    ...options.headers,
-  },
-});
+  const headers = new Headers(options.headers);
 
+  if (
+    options.body &&
+    !(options.body instanceof FormData) &&
+    !headers.has("Content-Type")
+  ) {
+    headers.set("Content-Type", "application/json");
+  }
 
-if (!response.ok) {
-const message = await response.text();
-throw new Error(message || `Request failed: ${response.status}`);
-}
+  const response = await fetch(
+    `${API_URL}${normalizedEndpoint}`,
+    {
+      ...options,
+      credentials: "include",
+      headers,
+    }
+  );
 
-return response.json() as Promise<T>;
+  if (!response.ok) {
+    const message = await response.text();
+    throw new Error(
+      message || `Request failed: ${response.status}`
+    );
+  }
+
+  if (response.status === 204) {
+    return undefined as T;
+  }
+
+  return response.json() as Promise<T>;
 }

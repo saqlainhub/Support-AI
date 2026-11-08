@@ -54,9 +54,7 @@ export default function LoginPage() {
     <main className="flex min-h-screen items-center justify-center bg-[#080d19] px-4 py-10 text-white">
       <div className="w-full max-w-md">
         <div className="mb-8 text-center">
-          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-blue-400/20 bg-blue-500/10 text-xl font-bold text-blue-400">
-            S
-          </div>
+         
 
           <h1 className="text-3xl font-semibold tracking-tight">
             Welcome back
